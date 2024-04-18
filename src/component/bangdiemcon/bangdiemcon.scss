@@ -1,0 +1,191 @@
+.score {
+    background-color: white !important;
+}
+.table > :not(caption) > * > * {
+    background-color: unset !important;
+    color: unset !important;
+}
+.bangdiem-chitiet {
+    background-color: #0c1a2a;
+}
+
+.info-golfer-place {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.name-golfer {
+    margin-bottom: unset;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info-middle {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.country-place {
+    padding-right: 22px;
+    padding-left: 20px;
+    border-right: 1px solid #353d4f;
+    .logo-img {
+        margin-top: 5px;
+        width: 18px;
+        img {
+            width: 100%;
+        }
+    }
+}
+.age-place {
+    margin-left: 20px;
+}
+.table-bordered {
+    border-color: #353d4f !important;
+}
+
+.s1 {
+    position: relative;
+    &::before {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: yellow;
+        border-radius: 50%;
+    }
+}
+.s2 {
+    position: relative;
+    &::before {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: red;
+        border-radius: 50%;
+    }
+}
+.s3 {
+    position: relative;
+    &::before {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: black;
+        border: 1px solid white;
+    }
+}
+.s4 {
+    position: relative;
+    &::before {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -18px;
+        content: '';
+        width: 13px;
+        height: 13px;
+        background-color: #0964cb;
+        border: 1px solid white;
+    }
+}
+
+// so sanh
+.bogey {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 27px;
+    height: 27px;
+    background-color: black;
+    color: white;
+}
+.birdie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.double{
+    color: #0964cb;
+    display: flex;
+    justify-content: center;
+}
+.soduong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: black;
+    color: white;
+    padding: 0 5px;
+    position: relative;
+    &::before {
+        background-color: black;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -0.3rem;
+        width: 0.6rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        content: '';
+        
+    }
+}
+.soam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0 5px;
+    background-color: red;
+    color: white;
+    position: relative;
+    &::before {
+        background-color: red;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -0.3rem;
+        width: 0.6rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        content: '';
+        
+    }
+}

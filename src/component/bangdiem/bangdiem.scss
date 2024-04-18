@@ -1,0 +1,63 @@
+.ant-table .ant-table-container .ant-table-content table thead.ant-table-thead .ant-table-cell {
+    background-color: #092047;
+    color: white;
+}
+
+.ant-table-wrapper
+    .ant-table-thead
+    > tr
+    > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: transparent !important;
+}
+
+.score-label {
+    font-size: 0.875rem;
+    display: inline-block;
+    position: relative;
+    width: 2.2rem;
+    padding: 0.25rem 0.25rem 0.25rem 0.125rem;
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    z-index: 0;
+}
+.score-label-am {
+    background-color: #000016;
+    position: relative;
+    &::before {
+        background-color: #000016;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -0.3rem;
+        width: 0.6rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        content: '';
+        z-index: -1;
+    }
+}
+
+.country {
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.name {
+    color: #092047;
+    font-weight: bold;
+}
+
+.ant-table-tbody .ant-table-cell:nth-child(1) {
+    background-color: #f5f5f5;
+}
+.ant-table-tbody .ant-table-cell:last-child {
+    background-color: #f5f5f5;
+}
+
+//#0c1a2a
