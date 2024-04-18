@@ -1,3 +1,5 @@
+@import "../../scss/responsive.scss";
+
 .score {
     background-color: white !important;
 }
@@ -5,6 +7,13 @@
     background-color: unset !important;
     color: unset !important;
 }
+.table-bordered {
+    border-color: #353d4f !important;
+}
+.custom-table {
+    background-color: red; /* Change background color to light gray */
+}
+
 .bangdiem-chitiet {
     background-color: #0c1a2a;
 }
@@ -15,24 +24,39 @@
     position: relative;
 }
 .name-golfer {
-    margin-bottom: unset;
-    font-size: 18px;
-    font-weight: 700;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    @include sm{
+        margin-bottom: unset;
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+   
+    @include xs{
+        display: block;
+    }
 }
 .info-middle {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+    @include sm{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @include xs{
+        display: flex;
+    }
 }
 .country-place {
     padding-right: 22px;
     padding-left: 20px;
     border-right: 1px solid #353d4f;
+    @include xs{
+        display: block;
+    }
     .logo-img {
         margin-top: 5px;
         width: 18px;
@@ -43,9 +67,6 @@
 }
 .age-place {
     margin-left: 20px;
-}
-.table-bordered {
-    border-color: #353d4f !important;
 }
 
 .s1 {
@@ -98,6 +119,9 @@
 }
 .s4 {
     position: relative;
+    @include xs{
+        display: block;
+    }
     &::before {
         display: flex;
         align-items: center;
@@ -124,7 +148,7 @@
     background-color: black;
     color: white;
 }
-.birdie{
+.birdie {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,8 +159,16 @@
     background-color: red;
     color: white;
 }
-
-.double{
+.bangnhau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 27px;
+    height: 27px;
+    
+}
+.double {
     color: #0964cb;
     display: flex;
     justify-content: center;
@@ -146,7 +178,9 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: fit-content;
+    width: 27px;
+    height: 27px;
+    
     background-color: black;
     color: white;
     padding: 0 5px;
@@ -162,7 +196,6 @@
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
         content: '';
-        
     }
 }
 .soam {
@@ -170,7 +203,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: fit-content;
+    // width: fit-content;
+    width: 27px;
+    height: 27px;
+    
     padding: 0 5px;
     background-color: red;
     color: white;
@@ -186,6 +222,5 @@
         border-top-left-radius: 50%;
         border-bottom-left-radius: 50%;
         content: '';
-        
     }
 }

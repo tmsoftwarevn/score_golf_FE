@@ -86,7 +86,7 @@ const BandiemCon = () => {
 
   const Sosanh = (a, b) => {
     if (+a === +b) {
-      return "";
+      return "bangnhau";
     }
     if (+a < +b) {
       return "birdie";
@@ -94,22 +94,21 @@ const BandiemCon = () => {
     if (+a >= +b + 2) {
       return "double";
     }
-
     return "bogey";
   };
   return (
-    <div className="bangdiem-chitiet pt-3 px-4">
-      <div class="info-golfer-place text-white mb-4">
-        <p class="name-golfer text-left">Nguyễn Đức Sơn</p>
-        <div class="info-middle">
-          <div class="text-center country-place ">
+    <div className="bangdiem-chitiet pt-3 px-4 mt-2">
+      <div className="info-golfer-place text-white mb-4">
+        <p className="name-golfer text-left">Nguyễn Đức Sơn</p>
+        <div className="info-middle">
+          <div className="text-center country-place ">
             <div className="logo-img">
               <img src={img} />
             </div>
 
             <div className="mt-2">VIE</div>
           </div>
-          <div class="text-center age-place">
+          <div className="text-center age-place">
             <div style={{ fontWeight: "900", fontSize: "18px" }}>+4</div>
 
             <div className="mt-1" style={{ fontSize: "16px" }}>
@@ -119,10 +118,12 @@ const BandiemCon = () => {
         </div>
       </div>
       {/* /// table */}
-      <div className="table-responsive">
-        <table className="table table-bordered">
+      {/* <div className="border-t-red-700 w-full mb-2 bg-blue-600 h-px"></div> */}
+      
+      <div class="table-responsive">
+        <table className="table table-bordered ">
           <tbody>
-            <tr className="success text-center text-white font-bold">
+            <tr className="text-center text-white font-bold">
               <th className="text-center">Hole</th>
               <td>1</td>
               <td>2</td>
@@ -267,7 +268,7 @@ const BandiemCon = () => {
                 </div>
               </td>
               <td>
-                <div className="">
+                <div className="bangnhau">
                   {scoreUser.s1 +
                     scoreUser.s2 +
                     scoreUser.s3 +
@@ -325,7 +326,7 @@ const BandiemCon = () => {
                 </div>
               </td>
               <td>
-                <div className="">
+                <div className="bangnhau">
                   {scoreUser.s10 +
                     scoreUser.s11 +
                     scoreUser.s12 +
@@ -338,7 +339,7 @@ const BandiemCon = () => {
                 </div>
               </td>
               <td>
-                <div>
+                <div className="bangnhau">
                   {scoreUser.s1 +
                     scoreUser.s2 +
                     scoreUser.s3 +

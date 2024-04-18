@@ -10,6 +10,10 @@
     background-color: transparent !important;
 }
 
+.ant-table-wrapper table{
+    border-collapse: collapse;
+}
+
 .score-label {
     font-size: 0.875rem;
     display: inline-block;
@@ -21,7 +25,7 @@
     line-height: 1rem;
     z-index: 0;
 }
-.score-label-am {
+.score-label-duong {
     background-color: #000016;
     position: relative;
     &::before {
@@ -38,7 +42,23 @@
         z-index: -1;
     }
 }
-
+.score-label-am {
+    background-color: #dc1a21;
+    position: relative;
+    &::before {
+        background-color: #dc1a21;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -0.3rem;
+        width: 0.6rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        content: '';
+        z-index: -1;
+    }
+}
 .country {
     width: 24px;
     height: 24px;
@@ -61,3 +81,5 @@
 }
 
 //#0c1a2a
+
+

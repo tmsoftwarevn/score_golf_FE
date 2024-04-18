@@ -4,63 +4,21 @@ import { Badge, Dropdown, Space, Table } from "antd";
 import { render } from "@testing-library/react";
 import "./bangdiem.scss";
 import img from "../../assets/images/VIE.png";
-
+import BandiemCon from "../bangdiemcon/Bangdiemcon";
 const Bangdiem = () => {
-  const expandedRowRender = () => {
-    const columns = [
-      {
-        title: "Date",
-        dataIndex: "date",
-        key: "date",
-      },
-      {
-        title: "Name",
-        dataIndex: "name",
-        key: "name",
-      },
-      {
-        title: "Status",
-        key: "state",
-        render: () => <Badge status="success" text="Finished" />,
-      },
-      {
-        title: "Upgrade Status",
-        dataIndex: "upgradeNum",
-        key: "upgradeNum",
-      },
-    ];
-    const data = [];
-    for (let i = 0; i < 3; ++i) {
-      data.push({
-        key: i.toString(),
-        date: "2014-12-24 23:12:00",
-        name: "This is production name",
-        upgradeNum: "Upgraded: 56",
-      });
-    }
-    return <Table columns={columns} dataSource={data} pagination={false} />;
-  };
   const columns = [
     {
       title: "Pos",
       dataIndex: "pos",
       key: "pos",
-      align: 'center',
-    //   render: (text, record, index) => {
-    //     return (
-    //       <>
-    //         <div className="pos">
-    //           {record.key}
-    //         </div>
-    //       </>
-    //     );
-    //   },
+      align: "center",
     },
     {
       title: "Country",
       dataIndex: "country",
       key: "country",
-      align: 'center',
+      align: "center",
+      responsive: ["sm"],
       render: (text, record, index) => {
         return (
           <>
@@ -87,6 +45,15 @@ const Bangdiem = () => {
       title: "Today",
       dataIndex: "today",
       key: "today",
+      render: (text, record, index) => {
+        return (
+          <>
+            <div className={6 > 0 ? "font-bold" : "text-red-600 font-bold"}>
+              {6 > 0 ? "+" + 5 : 5}
+            </div>
+          </>
+        );
+      },
     },
     {
       title: "Thru",
@@ -100,7 +67,15 @@ const Bangdiem = () => {
       render: (text, record, index) => {
         return (
           <>
-            <div className="score-label score-label-am text-white">+8</div>
+            <div
+              className={
+                -6 > 0
+                  ? "score-label score-label-duong text-white font-bold"
+                  : "score-label score-label-am text-white font-bold"
+              }
+            >
+              {-6 > 0 ? "+" + 5 : 5}
+            </div>
           </>
         );
       },
@@ -109,14 +84,22 @@ const Bangdiem = () => {
       title: "Total",
       dataIndex: "total",
       key: "total",
-      align: 'center',
+      align: "center",
+      responsive: ["sm"],
+      render: (text, record, index) => {
+        return (
+          <>
+            <div className="text-blue-950 font-bold"> 75</div>
+          </>
+        );
+      },
     },
   ];
   const data = [];
   for (let i = 0; i < 5; ++i) {
     data.push({
       key: i.toString(),
-      pos: i,
+      pos: i + 1,
       country: "VN",
       player: "Nguyễn Đức Sơn",
       today: "+2",
@@ -129,11 +112,12 @@ const Bangdiem = () => {
     return {
       onClick: () => {
         // Handle row click event
-        console.log('Row clicked:', record);
+        console.log("Row clicked:", record);
       },
-      style: { cursor: 'pointer' },
+      style: { cursor: "pointer" },
     };
   };
+
   return (
     <>
       <Table
@@ -141,13 +125,14 @@ const Bangdiem = () => {
         expandable={{
           showExpandColumn: false,
           expandRowByClick: true,
-          expandedRowRender,
-          defaultExpandedRowKeys: ["0"],
+          expandedRowRender: () => <BandiemCon />,
+
+          //   defaultExpandedRowKeys: ["0"],
         }}
         dataSource={data}
         onRow={(record, rowIndex) => ({
-            ...handleRow(record),
-          })}
+          ...handleRow(record),
+        })}
         pagination={false}
       />
     </>

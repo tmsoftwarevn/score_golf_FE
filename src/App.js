@@ -4,7 +4,7 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
-import Home from "./page/home/Home";
+import Home from "./page/home bangdiem/Home";
 import BandiemCon from "./component/bangdiemcon/Bangdiemcon";
 
 
