@@ -47,8 +47,40 @@ const BangdiemAdmin = () => {
         );
       },
     },
-   
-   
+    {
+      title: "Score",
+      dataIndex: "score",
+      key: "score",
+      render: (text, record, index) => {
+        return (
+          <>
+            <div
+              className={
+                6 > 0
+                  ? "score-label score-label-duong text-white font-bold"
+                  : "score-label score-label-am text-white font-bold"
+              }
+            >
+              {-6 > 0 ? "+" + 5 : 5}
+            </div>
+          </>
+        );
+      },
+    },
+    {
+      title: "Total",
+      dataIndex: "total",
+      key: "total",
+      align: "center",
+      responsive: ["sm"],
+      render: (text, record, index) => {
+        return (
+          <>
+            <div className="text-blue-950 font-bold"> 75</div>
+          </>
+        );
+      },
+    },
   ];
   const data = [];
   for (let i = 0; i < 5; ++i) {
@@ -57,6 +89,8 @@ const BangdiemAdmin = () => {
       pos: i + 1,
       country: "VN",
       thru: "F",
+      score: "+4",
+      total: "73",
     });
   }
   const handleRow = (record) => {

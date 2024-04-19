@@ -48,6 +48,7 @@ const App = () => {
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
+        width={"150px"}
       >
         <div className="demo-logo-vertical" />
         <Menu

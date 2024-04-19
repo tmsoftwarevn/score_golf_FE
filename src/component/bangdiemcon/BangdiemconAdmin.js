@@ -1,4 +1,4 @@
-import "./bangdiemcon.scss";
+import "./bangdiemconAdmin.scss";
 import img from "../../assets/images/VIE.png";
 import { useEffect, useState } from "react";
 
@@ -130,9 +130,9 @@ const BandiemConAdmin = () => {
               <td>7</td>
               <td>8</td>
               <td>9</td>
-              <th>
+              {/* <th>
                 <strong>Out</strong>
-              </th>
+              </th> */}
               <td>10</td>
               <td>11</td>
               <td>12</td>
@@ -142,9 +142,9 @@ const BandiemConAdmin = () => {
               <td>16</td>
               <td>17</td>
               <td>18</td>
-              <th>In</th>
-              <th>Total</th>
-              <th>To Par</th>
+              {/* <td>In</td> */}
+              <td>Total</td>
+              <td>To Par</td>
             </tr>
             <tr className="text-center text-white font-bold">
               <td className="text-center">
@@ -160,7 +160,7 @@ const BandiemConAdmin = () => {
               <td>{score.s7}</td>
               <td>{score.s8}</td>
               <td>{score.s9}</td>
-              <td>
+              {/* <td>
                 {score.s1 +
                   score.s2 +
                   score.s3 +
@@ -170,7 +170,7 @@ const BandiemConAdmin = () => {
                   score.s7 +
                   score.s8 +
                   score.s9}
-              </td>
+              </td> */}
               <td>{score.s10}</td>
               <td>{score.s11}</td>
               <td>{score.s12}</td>
@@ -180,7 +180,7 @@ const BandiemConAdmin = () => {
               <td>{score.s16}</td>
               <td>{score.s17}</td>
               <td>{score.s18}</td>
-              <td>
+              {/* <td>
                 {score.s10 +
                   score.s11 +
                   score.s12 +
@@ -190,7 +190,7 @@ const BandiemConAdmin = () => {
                   score.s16 +
                   score.s17 +
                   score.s18}
-              </td>
+              </td> */}
               <td>
                 {score.s1 +
                   score.s2 +
@@ -214,7 +214,7 @@ const BandiemConAdmin = () => {
               <td></td>
             </tr>
 
-            {/* <tr className="text-center score text-blue font-bold">
+            <tr className="text-center score text-blue font-bold">
               <td className="text-center">
                 <strong>Score</strong>
               </td>
@@ -245,116 +245,50 @@ const BandiemConAdmin = () => {
               <td>
                 <NhapDiem />
               </td>
+              {/* <td>
+                
+              </td> */}
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              <td>
+                <NhapDiem />
+              </td>
+              {/* <td>
+                
+              </td> */}
               <td>
                 
               </td>
               <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
-                <NhapDiem />
-              </td>
-              <td>
                 
               </td>
-              <td>
-                
-              </td>
-              <td>
-                
-              </td>
-            </tr> */}
-            <tr>
-              <td><Input.OTP length={1} /></td>
-            
             </tr>
-
-            
-            {/* <tr className="score text-center">
-              <td className="text-left">
-                <strong>Player 1</strong>
-              </td>
-              <td>
-                <input type="number" min="-3" max="8" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td id="out"></td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="8" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="7" />{" "}
-              </td>
-              <td>
-                <input type="number" min="-3" max="8" />{" "}
-              </td>
-              <td id="in"></td>
-              <td id="total"></td>
-            </tr> */}
           </tbody>
         </table>
+
+       
       </div>
     </div>
   );
